@@ -1,0 +1,10 @@
+*** Error 18 "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\timer.h" Line 3(10,16): File can not be opened
+    Not in local "io.h"
+    Not in local "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\io.h"
+    Not in last "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\io.h"
+    Not in project "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\io.h"
+    Not in "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\io.h"
+    Not in "C:\Program Files (x86)\PICC\Devices\io.h"
+    Not in "C:\Program Files (x86)\PICC\Drivers\io.h"
+*** Error 128 "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\timer.h" Line 3(10,17): A #DEVICE required before this line
+*** Error 32 "D:\DOC\vi xu ly stm32\mau_ybt\PWM_STD\6 PWM\HARDWARE\TIMER\timer.h" Line 6(20,23): Expecting a , or )
