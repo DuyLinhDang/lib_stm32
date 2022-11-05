@@ -34,12 +34,7 @@
 //}
 
 //void EXTI3_IRQHandler(void)
-//{
-//   delay_ms(10);   
-//   if(KEY1==1)    
-//   {
-//      LED1=!LED1;
-//   }       
+//{ 
 //    EXTI_ClearITPendingBit(EXTI_Line3);    
 //}
 

@@ -297,9 +297,9 @@ uint16_t USART_Gets(USART_TypeDef* USARTx, char* buffer, uint16_t bufsize) {
 	uint16_t i = 0;
 	
 	/* Check for any data on USART */
-	if (USART_BufferEmpty(USARTx) || (!USART_FindCharacter(USARTx, '\n') && !USART_BufferFull(USARTx))) {
-		return 0;
-	}
+//	if (/*USART_BufferEmpty(USARTx) || */(!USART_FindCharacter(USARTx, '\n') && !USART_BufferFull(USARTx))) {
+//		return 0;
+//	}
 	
 	/* If available buffer size is more than 0 characters */
 	while (i < (bufsize - 1)) {
@@ -685,20 +685,20 @@ void UART8_InitPins(USART_PinsPack_t pinspack) {
 }
 #endif
 
-#ifdef USE_USART1
-void USART1_IRQHandler(void) {
-	//Check if interrupt was because data is received
-	if (USART_GetITStatus(USART1, USART_IT_RXNE)) {
-		#ifdef USART1_USE_CUSTOM_IRQ
-			//Call user function
-			USART1_ReceiveHandler(USART1->DR);
-		#else
-			//Put received data into internal buffer
-			USART_INT_InsertToBuffer(&F4_USART1, USART1->DR);
-		#endif
-	}
-}
-#endif
+//#ifdef USE_USART1
+//void USART1_IRQHandler(void) {
+//	//Check if interrupt was because data is received
+//	if (USART_GetITStatus(USART1, USART_IT_RXNE)) {
+//		#ifdef USART1_USE_CUSTOM_IRQ
+//			//Call user function
+//			USART1_ReceiveHandler(USART1->DR);
+//		#else
+//			//Put received data into internal buffer
+//			USART_INT_InsertToBuffer(&F4_USART1, USART1->DR);
+//		#endif
+//	}
+//}
+//#endif
 
 #ifdef USE_USART2
 void USART2_IRQHandler(void) {

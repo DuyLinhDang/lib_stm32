@@ -1,5 +1,5 @@
 #include "io.h"
-
+#include "delay.h"
 //////////////////////////////////////////////////////////////////////////////////    
 //m?t s? ch?c nang
 void io_Set(GPIO_TypeDef* GPIOx,u16 BITx,GPIOMode_TypeDef MODE,GPIOSpeed_TypeDef OSPEED)
@@ -45,8 +45,10 @@ void io_Set(GPIO_TypeDef* GPIOx,u16 BITx,GPIOMode_TypeDef MODE,GPIOSpeed_TypeDef
 }
 void step_motor(GPIO_TypeDef* GPIOx, uint16_t GPIO_Step_Pin,uint16_t GPIO_Dir_Pin,uint8_t dir, uint32_t speed,uint32_t step_number){
 	int counter = 0 ;
-	if(dir == 0)	GPIO_ResetBits(GPIOx,GPIO_Dir_Pin);
-	else					GPIO_SetBits(GPIOx,GPIO_Dir_Pin);
+	if(dir == 0)	
+		GPIO_ResetBits(GPIOx,GPIO_Dir_Pin);
+	else					
+		GPIO_SetBits(GPIOx,GPIO_Dir_Pin);
 	for(counter = 0; counter<step_number; counter++){
 		GPIO_ResetBits(GPIOx,GPIO_Step_Pin);
 		delay_us(10);
